@@ -110,30 +110,29 @@ int main()
 				if (carStatus)
 				{
 					int lap;
-					std::cout << "How many lap you want to do?(1 lap = 30 second): ";
+					std::cout << "How many lap you want?: ";
 					std::cin >> lap;
 
-					for (int i = 1; i <= lap; i++) {
-						if (selectedVehicle = 0)
+					for (int i = 1; i <= lap; i++)
+					{
+						int lapTime = rand() % 1000 + 20000;
+						if (selectedVehicle == 0)
 						{
-							std::cout << "Lap " << i << std::endl;
-							int lapTime = rand() % 5000 + 20000;
-							Sleep(lapTime);
-							std::cout << "Lap time: " << lapTime << " Milliseconds" << std::endl;
+							std::cout << "lap " << i << std::endl;
+							Sleep(lapTime / 1);
+							std::cout << "Lap time: " << lapTime;
 						}
-						else if (selectedVehicle = 1)
+						else if (selectedVehicle == 1)
 						{
-							std::cout << "Lap " << i << std::endl;
-							int lapTime = rand() % 4000 + 19000;
-							Sleep(lapTime);
-							std::cout << "Lap time: " << lapTime << " Milliseconds" << std::endl;
+							std::cout << "lap " << i << std::endl;
+							Sleep(lapTime / 1.09);
+							std::cout << "Lap time: " << lapTime / 1.09;
 						}
-						else if (selectedVehicle = 2)
+						else if (selectedVehicle == 2)
 						{
-							std::cout << "Lap " << i << std::endl;
-							int lapTime = rand() % 6000 + 25000;
-							Sleep(lapTime);
-							std::cout << "Lap time: " << lapTime << " Milliseconds" << std::endl;
+							std::cout << "lap " << i << std::endl;
+							Sleep(lapTime / 0.7);
+							std::cout << "Lap time: " << lapTime / 0.7;
 						}
 					}
 				}
