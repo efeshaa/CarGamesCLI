@@ -10,6 +10,7 @@
 *	3. status	-> see the car status (on or off)
 *	4. exit		-> exit the games
 *	5. lap		-> do lap on track
+*	6. change   -> change the car
 */
 
 int main()
@@ -45,7 +46,7 @@ int main()
 			// show command from the user
 			if (commands == "help")
 			{
-				std::cout << "Command list:\n1. start\t-> start the car\n2. stop\t\t-> stop the car\n3. status\t-> see car status (on or off)\n4. exit\t\t-> exit the console\n5. lap\t\t-> do lap on track\nThis cli is still on developemnt";
+				std::cout << "Command list:\n1. start\t-> start the car\n2. stop\t\t-> stop the car\n3. status\t-> see car status (on or off)\n4. exit\t\t-> exit the console\n5. lap\t\t-> do lap on track\n6. change\t-> change the car\nThis cli is still on developemnt";
 			}
 			
 			//-------------------------------------- START --------------------------------------
