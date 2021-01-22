@@ -19,7 +19,7 @@ int main()
 
 	std::cout << "Welcome to simple car games (still on development)";
 
-	std::string vehicleSelection[2] = { "McLaren 765lt", "Mercedes-AMG GT Black Series" };
+	std::string vehicleSelection[3] = { "McLaren 765lt", "Mercedes-AMG GT Black Series", "Honda CIVIC Type-R" };
 	bool vehicleSelected = false;
 	int selectedVehicle;
 
@@ -30,7 +30,7 @@ int main()
 		// If vehicle isn't selected you prompted to select the vehicle first
 		while (!vehicleSelected)
 		{
-			std::cout << "Vehicle selection:\n" << vehicleSelection[0] << std::endl << vehicleSelection[1] << "\nSelect (1/2): " ;
+			std::cout << "Vehicle selection:\n" << vehicleSelection[0] << std::endl << vehicleSelection[1] << std::endl << vehicleSelection[2] << "\nSelect (1/2/3): " ;
 			std::cin >> selectedVehicle;
 			vehicleSelected = true;
 			selectedVehicle--;
@@ -124,6 +124,13 @@ int main()
 						{
 							std::cout << "Lap " << i << std::endl;
 							int lapTime = rand() % 4000 + 19000;
+							Sleep(lapTime);
+							std::cout << "Lap time: " << lapTime << " Milliseconds" << std::endl;
+						}
+						else if (selectedVehicle = 2)
+						{
+							std::cout << "Lap " << i << std::endl;
+							int lapTime = rand() % 6000 + 25000;
 							Sleep(lapTime);
 							std::cout << "Lap time: " << lapTime << " Milliseconds" << std::endl;
 						}
