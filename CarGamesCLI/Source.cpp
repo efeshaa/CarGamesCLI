@@ -142,6 +142,22 @@ int main()
 			}
 
 			//-------------------------------------- SHOW ERROR --------------------------------------
+			else if (commands == "change")
+			{
+				if (!carStatus)
+				{
+					std::cout << "Vehicle selection:\n" << vehicleSelection[0] << std::endl << vehicleSelection[1] << std::endl << vehicleSelection[2] << "\nSelect (1/2/3): ";
+					std::cin >> selectedVehicle;
+					vehicleSelected = true;
+					selectedVehicle--;
+				} 
+				else
+				{
+					std::cout << "Turn off the car first";
+				}
+			}
+
+			//-------------------------------------- SHOW ERROR --------------------------------------
 			else
 			{
 				std::cout << commands << ": command not found use help to get help";
